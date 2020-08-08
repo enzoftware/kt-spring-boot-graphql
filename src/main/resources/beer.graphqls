@@ -1,0 +1,16 @@
+type Query {
+    beers: [Beer]
+}
+
+type Beer {
+    id: ID!
+    name: String
+    amount: Float
+    reviews: [Review]
+}
+
+type Mutation {
+    addBeer(name: String!, amount: Float!) : Beer!
+    deleteBeer(id: ID!) : Boolean
+    updateBeer(id:ID!, amount: Float!) : Beer!
+}
